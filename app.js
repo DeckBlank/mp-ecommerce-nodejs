@@ -8,6 +8,7 @@ app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
 app.use(express.static('assets'));
+app.use(express.json())
  
 app.use('/assets', express.static(__dirname + '/assets'));
 
