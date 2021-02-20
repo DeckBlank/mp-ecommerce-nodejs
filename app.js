@@ -85,7 +85,7 @@ app.get('/estado-pago/:status', function(req, res) {
     }
 	  res.render('estadoPago', {status:respuesta});
 });
-app.get('/webhooks', function(req, res) {
+app.post('/webhooks', function(req, res) {
   console.log(req.body);
   res.json(req.body)
 });
