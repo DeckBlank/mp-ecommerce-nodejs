@@ -56,6 +56,7 @@ app.post('/create_preference', async (req, res) => {
 		},
 		external_reference: process.env.EMAIL,
 		auto_return: 'approved',
+    notification_url:`${process.env.BACKEND}/webhooks`,
 	};
   console.log(preference);
   let respuesta = await generatePreference(preference);
