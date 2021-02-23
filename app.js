@@ -1,7 +1,7 @@
 require('dotenv').config()
 var express = require('express');
 var exphbs  = require('express-handlebars');
-const generatePreference = require('./mercadopago')
+const {generatePreference,getUsuario} = require('./mercadopago')
 
 var port = process.env.PORT || 3000
 
@@ -42,7 +42,7 @@ app.post('/create_preference', async (req, res) => {
         email: "test_user_46542185@testuser.com",
         phone: {
             "area_code": "52",
-            "number": "5549737300"
+            "number": 5549737300
         },
         identification: {
             "type": "DNI",
